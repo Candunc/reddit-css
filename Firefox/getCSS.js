@@ -1,31 +1,3 @@
-// From http://stackoverflow.com/a/1181586/1687505
-var arrayContains = function(needle) {
-	// Per spec, the way to identify NaN is that it is not equal to itself
-	var findNaN = needle !== needle;
-	var indexOf;
-
-	if(!findNaN && typeof Array.prototype.indexOf === 'function') {
-		indexOf = Array.prototype.indexOf;
-	} else {
-		indexOf = function(needle) {
-			var i = -1, index = -1;
-
-			for(i = 0; i < this.length; i++) {
-				var item = this[i];
-
-				if((findNaN && item !== item) || item === needle) {
-					index = i;
-					break;
-				}
-			}
-
-			return index;
-		};
-	}
-
-	return indexOf.call(this, needle) > -1;
-};
-
 // From http://stackoverflow.com/a/18278346/1687505
 function loadJSON(path, success, error)
 {
