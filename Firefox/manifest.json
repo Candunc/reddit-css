@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "reddit-css",
+	"version": "1.0",
+
+	"description": "",
+
+	"icons": {
+		
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://reddit.com/r/*"],
+			"js": ["getCSS.js"]
+		}
+	]
+}
