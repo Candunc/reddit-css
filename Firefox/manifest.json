@@ -11,7 +11,10 @@
 
 	"content_scripts": [
 		{
-			"matches": ["*://reddit.com/r/*"],
+			"matches": [
+				"*://reddit.com/r/*",
+				"*://www.reddit.com/r/*"
+			],
 			"js": ["getCSS.js"]
 		}
 	]
